@@ -72,7 +72,7 @@ with Tensor.train():
   with open("./esp32/main/weights.h", "w") as f:
     f.write("#pragma once\n")
     f.write(f"#define WEIGHTS_LEN {len(weights)}\n")
-    f.write("const unsigned char weights[WEIGHTS_LEN] = {\n")
+    f.write("const unsigned char weights_data[WEIGHTS_LEN] = {\n")
     for i, b in enumerate(weights):
       f.write(f"  {b}")
       if i != len(weights) - 1: f.write(",")
